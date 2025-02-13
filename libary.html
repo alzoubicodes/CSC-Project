@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A guide for teachers and parents</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+            background-color: #2c3e50; /* خلفية داكنة */
+            display: flex;
+            justify-content: center;
+            padding: 40px;
+        }
+
+        .library-container {
+            width: 100%;
+            max-width: 1100px;
+            background: #ecf0f1; /* خلفية فاتحة */
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .title {
+            font-size: 28px;
+            font-weight: bold;
+            text-align: center;
+            color: #34495e; /* لون داكن للنص */
+            margin-bottom: 30px;
+        }
+
+        .icon-section {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .icon-box {
+            text-align: center;
+            width: 30%;
+            padding: 30px;
+            background: #bdc3c7; /* خلفية رمادية فاتحة */
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .icon-box:hover {
+            transform: scale(1.05);
+            background: #95a5a6; /* خلفية داكنة عند التمرير */
+        }
+
+        .icon-box img {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 20px;
+        }
+
+        .icon-box h3 {
+            font-size: 22px;
+            color: #2980b9;
+        }
+
+        .back-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: #16a085;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+
+        .back-btn:hover {
+            background: #1abc9c;
+        }
+
+        .content-section {
+            font-size: 18px;
+            color: #34495e;
+            margin-top: 30px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .content-section h2 {
+            font-size: 24px;
+            color: white;
+            border-bottom: 2px solid white;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .content-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .content-section ul li {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        /* تخصيص ألوان للأقسام المختلفة */
+        #teacher-guide {
+            background-color: #34495e; /* خلفية داكنة */
+            color: white;
+        }
+
+        #parent-guide {
+            background-color: #16a085; /* خلفية خضراء داكنة */
+            color: white;
+        }
+
+        #research {
+            background-color: #e67e22; /* خلفية برتقالية داكنة */
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <button class="back-btn" onclick="goBack()">&#8592; Back</button>
+
+    <div class="library-container">
+        <div class="title">A guide for teachers, parents and scientific research</div>
+
+        <!-- Icon Section for Guides -->
+        <div class="icon-section">
+            <!-- Teacher's Guide Icon -->
+            <div class="icon-box" onclick="showTeacherGuide()">
+                <img src="https://img.icons8.com/ios/452/teacher.png" alt="معلم">
+                <h3>Teachers Guide</h3>
+            </div>
+
+            <!-- Parent's Guide Icon -->
+            <div class="icon-box" onclick="showParentGuide()">
+                <img src="https://img.icons8.com/ios/452/parenting.png" alt="أولياء الأمور">
+                <h3>Parents Guide</h3>
+            </div>
+
+            <!-- New Research Icon -->
+            <div class="icon-box" onclick="showResearch()">
+                <img src="https://img.icons8.com/ios/452/open-book.png" alt="بحث علمي">
+                <h3>Scientific research</h3>
+            </div>
+        </div>
+
+        <!-- Teacher's Guide Content -->
+        <div class="content-section" id="teacher-guide" style="display:none;">
+            <h2>Teachers Guide</h2>
+            <p>This guide is an important reference for teachers who face challenges in dealing with bullying and protecting adolescents in the school environment. It includes some important points that can be followed to promote a safe and inspiring environment for students:</p>
+            <ul>
+                <li>Conducting awareness workshops on bullying and how to deal with it.</li>
+                <li>Encouraging respect for diversity and differences among students.</li>
+                <li>Providing a school environment that encourages cooperation among students.</li>
+                <li>Teach students effective communication and self-help skills.</li>
+                <li>Supporting students who suffer from bullying and providing them with psychological assistance.</li>
+            </ul>
+        </div>
+
+        <!-- Parent's Guide Content -->
+        <div class="content-section" id="parent-guide" style="display:none;">
+            <h2>Parents Guide</h2>
+            <p>This guide is specifically prepared to help parents recognize their important role in protecting their children from bullying and creating a supportive home environment for them.:</p>
+            <ul>
+                <li>Constant communication with children to ensure their psychological well-being.</li>
+                <li>Teaching children how to confront bullying with confidence and without violence.</li>
+                <li>Monitor online activities to ensure children are not exposed to digital bullying.</li>
+                <li>Encouraging children to seek help if they are being bullied.</li>
+                <li>Support them emotionally and discuss with them any problems they may face at school.</li>
+            </ul>
+        </div>
+
+        <!-- Research Content -->
+        <div class="content-section" id="research" style="display:none;">
+            <h2>Scientific research on bullying and adolescent protection</h2>
+            <p>This research provides scientific insights and evidence that supports anti-bullying strategies and understanding its effects on adolescents:</p>
+            <ul>
+                <li>Bullying has long-term psychological effects such as depression, anxiety, and loss of self-confidence.</li>
+                <li>Studies indicate that schools that adopt bullying awareness programs show a significant reduction in incidents.</li>
+                <li>The role of teachers and parents is important in helping reduce bullying and raising awareness about it.</li>
+                <li>Bullying can be reduced using social and emotional training techniques in schools.</li>
+                <li>Research recommends the use of group activities and life skills training as bullying prevention tools.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // العودة للصفحة السابقة
+        function goBack() {
+            window.history.back();
+        }
+
+        // إظهار دليل المعلمين
+        function showTeacherGuide() {
+            document.getElementById('teacher-guide').style.display = 'block';
+            document.getElementById('parent-guide').style.display = 'none';
+            document.getElementById('research').style.display = 'none';
+        }
+
+        // إظهار دليل أولياء الأمور
+        function showParentGuide() {
+            document.getElementById('teacher-guide').style.display = 'none';
+            document.getElementById('parent-guide').style.display = 'block';
+            document.getElementById('research').style.display = 'none';
+        }
+
+        // إظهار البحث العلمي
+        function showResearch() {
+            document.getElementById('teacher-guide').style.display = 'none';
+            document.getElementById('parent-guide').style.display = 'none';
+            document.getElementById('research').style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="csc.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+            background-color: #0A192F;
+            color: white;
+        }
+
+        /* زر فتح القائمة */
+        .menu-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #1B3A57;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 5px;
+            z-index: 1000;
+            transition: background 0.3s;
+        }
+
+        .menu-btn:hover {
+            background: #0E2954;
+        }
+
+        /* الشريط الجانبي */
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            background: #112D4E;
+            position: fixed;
+            top: 0;
+            right: -260px;
+            transition: right 0.3s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 8px;
+            z-index: 1001;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        .sidebar ul li {
+            margin: 15px 0;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            display: block;
+            padding: 10px;
+            background: #1B3A57;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .sidebar ul li a:hover {
+            background: #0E2954;
+        }
+
+        /* عند فتح الشريط الجانبي */
+        .sidebar.open {
+            right: 0;
+        }
+
+        /* تغطية الصفحة عند فتح القائمة */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+            z-index: 1000;
+        }
+
+        .overlay.active {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* المحتوى الرئيسي */
+        .main-content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #112D4E;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+        }
+
+        .main-image {
+            width: 50%;
+            max-width: 300px;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            transition: transform 0.3s ease;
+        }
+
+        .main-image:hover {
+            transform: scale(1.1);
+        }
+
+        /* أيقونة إنستغرام داخل مستطيل صغير */
+        .instagram-btn {
+            width: 45px; /* العرض */
+            height: 45px; /* الارتفاع */
+            background-color: #E1306C; /* لون الخلفية */
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%; /* شكل دائري */
+            font-size: 20px; /* حجم الأيقونة */
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            cursor: pointer;
+            margin: 20px auto;
+        }
+
+        .instagram-btn:hover {
+            transform: scale(1.1);
+            background-color: #C13584;
+        }
+
+        /* قسم التواصل */
+        .contact {
+            background-color: #0A192F;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .contact form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .contact form input,
+        .contact form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #0073e6;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .contact form button:hover {
+            background-color: #005bb5;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- زر فتح القائمة -->
+    <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+
+    <!-- الشريط الجانبي -->
+    <div class="sidebar" id="sidebar">
+        <button class="close-btn" onclick="toggleSidebar()">×</button>
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="csc.html">Home</a></li>
+            <li><a href="tell.html">Tell</a></li>
+            <li><a href="account_safety_tips.html">Account Safety Tips</a></li>
+            <li><a href="awareness_section.html">Awareness Section</a></li>
+            <li><a href="security_check.html">Security Check</a></li>
+            <li><a href="otherstories.html">Other Stories</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="groupchat.html">Group Chat</a></li>
+            <li><a href="libary.html">Libary</a></li>
+        </ul>
+    </div>
+
+    <!-- تغطية الصفحة عند فتح الشريط الجانبي -->
+    <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+
+    <!-- المحتوى الرئيسي -->
+    <div class="main-content">
+        <div class="container">
+            <img src="CC logo.png" alt="شعار الموقع" class="main-image">
+            <h1>Welcome to Cyber Sheild Website !</h1>
+            <p> An integrated site that provides a safe and supportive environment for teenagers The direction of cyberbully.</p>
+            <!-- استبدال "اضغط هنا" بأيقونة إنستغرام صغيرة داخل مستطيل -->
+            <a href="https://www.instagram.com/cybershield.kw" target="_blank">
+                <div class="instagram-btn">
+                    <img src="https://img.icons8.com/ios/452/instagram-new.png" alt="Instagram" style="width: 25px; height: 25px;">
+                </div>
+            </a>
+        </div>
+
+        <!-- قسم التواصل -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="text-center">Contact Us !</h2>
+                <form id="contactForm">
+                    <input type="text" id="name" placeholder="Name" required>
+                    <input type="email" id="email" placeholder="E-mail" required>
+                    <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2025 Cyber Smart Crew • جميع الحقوق محفوظة.</p>
+        </footer>
+    </div>
+
+    <script>
+        // فتح/إغلاق الشريط الجانبي
+        function toggleSidebar() {
+            document.getElementById('sidebar').classList.toggle('open');
+            document.getElementById('overlay').classList.toggle('active');
+        }
+    </script>
+
+</body>
+</html>

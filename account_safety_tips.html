@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Security Tips</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e1e2f;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: #2c2c3e;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        button {
+            background-color: #ff5c5c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+        button:hover {
+            background-color: #ff3838;
+        }
+        .hidden {
+            display: none;
+            margin-top: 20px;
+            text-align: left;
+            padding: 15px;
+            background: #3c3c50;
+            border-radius: 8px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            margin: 8px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>🔒 Account Security Tips</h2>
+
+        <button onclick="showPasswordTips()">🔑 Strong Password Tips</button>
+        <div id="passwordTips" class="hidden">
+            <h3>How to Create a Strong Password?</h3>
+            <ul>
+                <li>✅ Use at least 12 characters, including letters, numbers, and symbols.</li>
+                <li>🚫 Avoid using common words or personal information.</li>
+                <li>🔄 Change your password regularly.</li>
+                <li>🛡 Use a password manager to store your passwords securely.</li>
+            </ul>
+        </div>
+
+        <button onclick="show2FA()">🔐 Enable Two-Factor Authentication</button>
+        <div id="twoFactor" class="hidden">
+            <h3>How to Enable Two-Factor Authentication?</h3>
+            <ul>
+                <li>🔹 Go to your account security settings.</li>
+                <li>🔹 Select "Two-Factor Authentication".</li>
+                <li>🔹 Choose a verification method like SMS or an authentication app.</li>
+                <li>🔹 Confirm activation and save backup codes.</li>
+            </ul>
+        </div>
+
+        <button onclick="showPhishingProtection()">⚠ Protect Yourself from Phishing</button>
+        <div id="phishingProtection" class="hidden">
+            <h3>How to Avoid Phishing Attacks?</h3>
+            <ul>
+                <li>🚫 Do not click on suspicious links in emails or messages.</li>
+                <li>🔍 Always check the URL before entering your credentials.</li>
+                <li>🛡 Use security software and antivirus protection.</li>
+                <li>🔄 Never share your login details with anyone.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function showPasswordTips() {
+            document.getElementById("passwordTips").style.display = "block";
+        }
+        function show2FA() {
+            document.getElementById("twoFactor").style.display = "block";
+        }
+        function showPhishingProtection() {
+            document.getElementById("phishingProtection").style.display = "block";
+        }
+    </script>
+
+</body>
+</html>

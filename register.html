@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+            background-color: #2C3E50;
+            color: white;
+            text-align: center;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #34495E;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+        }
+
+        .title {
+            font-size: 28px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            font-size: 18px;
+            display: block;
+            margin-bottom: 5px;
+            color: #ECF0F1;
+        }
+
+        input, button {
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 16px;
+            margin-bottom: 10px;
+            border: 1px solid #BDC3C7;
+        }
+
+        button {
+            background-color: #1B3A57;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #0E2954;
+        }
+
+        .back-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: #1B3A57;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+
+        .back-btn:hover {
+            background: #0E2954;
+        }
+    </style>
+</head>
+<body>
+    <button class="back-btn" onclick="goBack()">&#8592;</button>
+    <div class="container">
+        <div class="title">Register for the event</div>
+        <form action="submit_registration.html" method="POST">
+            <div class="form-group">
+                <label for="name">full name:</label>
+                <input type="text" id="name" name="name" required placeholder="أدخل اسمك هنا">
+            </div>
+
+            <div class="form-group">
+                <label for="email">e-mail:</label>
+                <input type="email" id="email" name="email" required placeholder="أدخل بريدك الإلكتروني">
+            </div>
+
+            <div class="form-group">
+                <label for="phone">phone number:</label>
+                <input type="tel" id="phone" name="phone" required placeholder="أدخل رقم هاتفك">
+            </div>
+
+            <div class="form-group">
+                <button type="submit">Attendance registration</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

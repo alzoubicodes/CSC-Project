@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Awareness</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e1e2f;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 700px;
+            margin: auto;
+            background: #2c2c3e;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        button {
+            background-color: #ff9f43;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+        button:hover {
+            background-color: #ff7f00;
+        }
+        .hidden {
+            display: none;
+            margin-top: 20px;
+            text-align: left;
+            padding: 15px;
+            background: #3c3c50;
+            border-radius: 8px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            margin: 8px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>📢 Cyber Awareness Section</h2>
+
+        <button onclick="showCyberThreats()">⚠ Cyber Threats</button>
+        <div id="cyberThreats" class="hidden">
+            <h3>Common Cyber Threats:</h3>
+            <ul>
+                <li>🛑 *Phishing* – Fake emails or messages tricking users into giving personal data.</li>
+                <li>💀 *Malware* – Viruses, ransomware, and spyware that can harm your device.</li>
+                <li>🔗 *Social Engineering* – Hackers pretending to be trusted sources to steal information.</li>
+                <li>📡 *Wi-Fi Attacks* – Using fake Wi-Fi networks to steal login credentials.</li>
+            </ul>
+        </div>
+
+        <button onclick="showOnlineFraud()">💳 Online Fraud & Scams</button>
+        <div id="onlineFraud" class="hidden">
+            <h3>How to Avoid Online Scams?</h3>
+            <ul>
+                <li>🔍 *Verify Websites* – Always check the URL before entering your details.</li>
+                <li>🚫 *Avoid Suspicious Links* – Don't click on unknown links in emails or social media.</li>
+                <li>🔒 *Use Secure Payment Methods* – Prefer credit cards over direct bank transfers.</li>
+                <li>🛡 *Enable Alerts* – Set up fraud alerts on your banking accounts.</li>
+            </ul>
+        </div>
+
+        <button onclick="showSafeBrowsing()">🌐 Safe Browsing Tips</button>
+        <div id="safeBrowsing" class="hidden">
+            <h3>How to Stay Safe Online?</h3>
+            <ul>
+                <li>🔹 *Use Strong Passwords* – Combine letters, numbers, and symbols.</li>
+                <li>🔹 *Enable Two-Factor Authentication* – Adds an extra security layer.</li>
+                <li>🔹 *Keep Software Updated* – Security patches fix vulnerabilities.</li>
+                <li>🔹 *Be Cautious with Public Wi-Fi* – Avoid logging into accounts on public networks.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function showCyberThreats() {
+            document.getElementById("cyberThreats").style.display = "block";
+        }
+        function showOnlineFraud() {
+            document.getElementById("onlineFraud").style.display = "block";
+        }
+        function showSafeBrowsing() {
+            document.getElementById("safeBrowsing").style.display = "block";
+        }
+    </script>
+
+</body>
+</html>

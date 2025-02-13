@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send an anonymous message</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0A192F;
+            color: white;
+            text-align: center;
+        }
+        .header {
+            width: 100%;
+            height: 50px;
+            background-color: #112D4E;
+            display: flex;
+            align-items: center;
+            padding: 0 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .back-button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .container {
+            max-width: 500px;
+            margin: 60px auto;
+            background: #112D4E;
+            padding: 55px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+        }
+        textarea, button {
+            width: 100%;
+            padding: 12px;
+            margin: 12px 0;
+            font-size: 16px;
+            border: none;
+            border-radius: 6px;
+        }
+        textarea {
+            background-color: #1B3A57;
+            color: white;
+            resize: none;
+            height: 120px;
+        }
+        button {
+            background-color: #0073e6;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        button:hover {
+            background-color: #005bb5;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <button class="back-button" onclick="goBack()">&#8592; رجوع</button>
+    </div>
+    <div class="container">
+        <h2>Send an anonymous message</h2>
+        <textarea id="message" placeholder="Write Your Message Here"></textarea>
+        <button onclick="sendMessage()">Send</button>
+    </div>
+    
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+        
+        function sendMessage() {
+            let message = document.getElementById("message").value.trim();
+            if (message === "") {
+                alert("Please write a message before sending");
+                return;
+            }
+            alert("Message sent successfully !");
+            document.getElementById("message").value = "";
+        }
+    </script>
+</body>
+</html>

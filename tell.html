@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tell Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+            background-color: #0A192F;
+            color: white;
+            text-align: center;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #112D4E;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+        }
+
+        .title {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .options {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+        }
+
+        .option {
+            flex: 1;
+            padding: 20px;
+            background: #1B3A57;
+            border-radius: 10px;
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .option:hover {
+            background: #0E2954;
+        }
+
+        .back-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: #1B3A57;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+
+        .back-btn:hover {
+            background: #0E2954;
+        }
+    </style>
+</head>
+<body>
+    <button class="back-btn" onclick="goBack()">&#8592;</button>
+    <div class="container">
+        <div class="title">Choose an option</div>
+        <div class="options">
+            <a href="anonymous.html" class="option">Send anonymously</a>
+            <a href="therapy.html" class="option">Book a private session with a therapist</a>
+        </div>
+    </div>
+    
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stories about bullying and protecting teenagers</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+            background-color: #2C3E50;
+            color: white;
+            text-align: center;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #34495E;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+        }
+
+        .title {
+            font-size: 28px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .story {
+            background: #1C2833;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+            text-align: right;
+        }
+
+        .story-title {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #F39C12;
+        }
+
+        .story-text {
+            font-size: 18px;
+            color: #ECF0F1;
+            line-height: 1.8;
+        }
+
+        .options {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .option {
+            flex: 1;
+            padding: 15px;
+            background: #1B3A57;
+            border-radius: 10px;
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .option:hover {
+            background: #0E2954;
+        }
+
+        .back-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: #1B3A57;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+
+        .back-btn:hover {
+            background: #0E2954;
+        }
+    </style>
+</head>
+<body>
+    <button class="back-btn" onclick="goBack()">&#8592;</button>
+    <div class="container">
+        <div class="title">Stories about bullying and how to protect</div>
+
+        <!-- القصة 1 -->
+        <div class="story">
+            <div class="story-title">📖 Ahmed's story and school bullying</div>
+            <div class="story-text">
+                Ahmed was a diligent and excellent student, but he was bullied at school because of his excess weight.
+
+Every day he heard harsh words from some of his classmates, and they made fun of him in front of everyone. He started to feel frustrated and lost his self-confidence.
+One day, Ahmed decided to tell his parents and teachers what was happening. They supported Ahmed and encouraged him to talk to the school counselor.
+Gradually, Ahmed learned how to confront bullying with confident words, and he also started to play sports and make new friends with those who respected him.
+After a while, the bullies started to lose interest when they saw that Ahmed was no longer affected by their words, and he returned to his normal life
+            </div>
+        </div>
+
+        <!-- القصة 2 -->
+        <div class="story">
+            <div class="story-title">📖 Sarah's story and cyberbullying</div>
+            <div class="story-text">
+                Sarah loved using social media, but she didn't expect that these sites would turn into a source of harm for her.
+
+She started receiving annoying messages from unknown accounts that mocked her photos and spread rumors about her.
+At first, she felt scared and didn't respond to any messages, but it started to affect her mental health.
+Sarah decided to talk to her parents, and they supported her and reported the offensive accounts to the site.
+She also talked to an expert in cybersecurity who advised her on how to protect her accounts and not interact with bullies.
+After a while, these accounts disappeared, and Sarah returned to using the Internet in a safe and positive way.
+            </div>
+        </div>
+
+        <!-- القصة 3 -->
+        <div class="story">
+            <div class="story-title">📖 Khaled's story and how he became a defender of others</div>
+            <div class="story-text">
+                Khaled saw his classmates being bullied but didn’t know how to help them. One day, he saw one of his friends being insulted by a group of students.
+
+Instead of staying silent, Khaled decided to intervene in a calm way, talking to the bullies and explaining to them that what they were doing was wrong.
+
+He also reported the incident to the school administration, and measures were taken to protect his classmate.
+
+After this incident, Khaled decided to be someone who defends the rights of others, so he participated in awareness activities about the dangers of bullying and the importance of kindness and cooperation among students.
+            </div>
+        </div>
+
+        <!-- خيارات التفاعل -->
+        <div class="options">
+            <a href="report.html" class="option">📢 Report a case of bullying</a>
+            <a href="support.html" class="option">🆘 Request for psychological support</a>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

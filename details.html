@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+            background-color: #2C3E50;
+            color: white;
+            text-align: center;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #34495E;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+        }
+
+        .title {
+            font-size: 28px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .event-detail {
+            background: #1C2833;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+            text-align: right;
+        }
+
+        .event-title {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #F39C12;
+        }
+
+        .event-info {
+            font-size: 18px;
+            color: #ECF0F1;
+            line-height: 1.8;
+        }
+
+        .back-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: #1B3A57;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+
+        .back-btn:hover {
+            background: #0E2954;
+        }
+
+        .register-btn {
+            padding: 15px 30px;
+            background: #1B3A57;
+            color: white;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 10px;
+            display: inline-block;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+
+        .register-btn:hover {
+            background: #0E2954;
+        }
+    </style>
+</head>
+<body>
+    <button class="back-btn" onclick="goBack()">&#8592;</button>
+    <div class="container">
+        <div class="title">Event details</div>
+
+        <div class="event-detail">
+            <div class="event-title">📅 A workshop on bullying and how to deal with it</div>
+            <div class="event-info">
+                <p>Time: February 10, 2025 - 5:00 PM</p>
+                <p>Location: Main meeting room, youth center</p>
+                <p>Description: A workshop aimed at educating young people about the danger of bullying and how to deal with it at school or online. This workshop will be lectured by specialists in psychology and cybersecurity.</p>
+                <p>Speakers: D. Ahmed Youssef (Psychologist) And M. Laila Saleh (electronic security expert).</p>
+                <p>Limited number of seats: 50</p>
+            </div>
+            <a href="register.html" class="register-btn">Attendance registration</a>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

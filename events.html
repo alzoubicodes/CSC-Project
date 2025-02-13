@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upcoming events</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+            background-color: #2C3E50;
+            color: white;
+            text-align: center;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #34495E;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+        }
+
+        .title {
+            font-size: 28px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .event {
+            background: #1C2833;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+            text-align: right;
+        }
+
+        .event-title {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #F39C12;
+        }
+
+        .event-details {
+            font-size: 18px;
+            color: #ECF0F1;
+            line-height: 1.8;
+        }
+
+        .event-footer {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+        }
+
+        .button {
+            padding: 15px;
+            background: #1B3A57;
+            border-radius: 10px;
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            transition: 0.3s;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .button:hover {
+            background: #0E2954;
+        }
+
+        .back-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: #1B3A57;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+
+        .back-btn:hover {
+            background: #0E2954;
+        }
+    </style>
+</head>
+<body>
+    <button class="back-btn" onclick="goBack()">&#8592;</button>
+    <div class="container">
+        <div class="title">Upcoming events</div>
+
+        <!-- الحدث 1 -->
+        <div class="event">
+            <div class="event-title">📅 A workshop on bullying and how to deal with it</div>
+            <div class="event-details">
+                <p>Time: February 10, 2025 - 5:00 PM</p>
+                <p>Location: Main meeting room, youth center</p>
+                <p>Description: A workshop aimed at educating young people about the danger of bullying and how to deal with it at school or online. This workshop will be lectured by specialists in psychology and electronic security.</p>
+            </div>
+            <div class="event-footer">
+                <a href="register.html" class="button">Attendance registration</a>
+                <a href="details.html" class="button">More details</a>
+            </div>
+        </div>
+
+        <!-- الحدث 2 -->
+        <div class="event">
+            <div class="event-title">📅 Seminar on digital safety for children</div>
+            <div class="event-details">
+                <p>Time: February 15, 2025 - 11:00 AM</p>
+                <p>Location: Conference Hall, Technology Center</p>
+                <p>Description: A seminar aimed at teaching children how to maintain their digital safety while using the Internet. Speakers will address topics such as privacy and protecting personal information.</p>
+            </div>
+            <div class="event-footer">
+                <a href="register.html" class="button">Attendance registration</a>
+                <a href="details.html" class="button">More details</a>
+            </div>
+        </div>
+
+        <!-- الحدث 3 -->
+        <div class="event">
+            <div class="event-title">📅 Meeting young people to raise social awareness</div>
+            <div class="event-details">
+                <p>الوقت: 20 فبراير 2025 - 7:00 مساءً</p>
+                <p>Location: Activities Hall, City Library</p>
+                <p>Description: A meeting aimed at promoting a culture of social solidarity and awareness of human rights among young people, and how to deal with social issues such as bullying and equality.</p>
+            </div>
+            <div class="event-footer">
+                <a href="register.html" class="button">Attendance registration</a>
+                <a href="details.html" class="button">More details</a>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>
